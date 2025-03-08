@@ -12,33 +12,37 @@
 *
 ********************************************************************************/ 
 
-import Image from 'next/image';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 
-const Home = () =>   {
+export default function Home() {
   return (
-    <div>
-      <Image
-        src="https://upload.wikimedia.org/wikipedia/commons/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg"
-        alt="Metropolitan Museum of Art"
-        width={1200}
-        height={800}
-        className="img-fluid rounded"
-      />
-      <div className="row">
-        <div className="col-md-6">
+    <Container fluid>
+      <Row>
+        <Col>
+          {/* Display the image of the Metropolitan Museum of Art */}
+          <Image 
+            src="https://upload.wikimedia.org/wikipedia/commons/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg"
+            alt="Metropolitan Museum of Art"
+            fluid
+            rounded
+          />
+        </Col>
+      </Row>
+
+      <Row className="mt-4">
+        <Col md={6}>
+          {/* Description from Wikipedia */}
           <p>
-            The Metropolitan Museum of Art, colloquially The Met, is the largest art museum in the United States.
-            Located in New York City, it houses a vast collection spanning 5,000 years of art from various cultures.
+            The Metropolitan Museum of Art of New York City, commonly known as the Met, is the largest art museum in the United States and one of the largest in the world. Its permanent collection contains over two million works of art, divided among seventeen curatorial departments. The Mets collections include works from ancient Egypt, classical Greece and Rome, European painting and sculpture, American decorative arts, and many more.
           </p>
-        </div>
-        <div className="col-md-6">
+        </Col>
+        <Col md={6}>
+          {/* Additional information with a link to the Wikipedia entry */}
           <p>
-            For more information, visit the <a href="https://en.wikipedia.org/wiki/Metropolitan_Museum_of_Art" target="_blank" rel="noreferrer">Metropolitan Museum of Art Wikipedia page</a>.
+            For more information, visit the <a href="https://en.wikipedia.org/wiki/Metropolitan_Museum_of_Art" target="_blank" rel="noreferrer">Metropolitan Museum of Art Wikipedia entry</a>.
           </p>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
-
-export default Home
