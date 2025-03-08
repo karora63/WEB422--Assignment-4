@@ -7,7 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Form } from 'react-bootstrap'; // Importing Form from react-bootstrap
 import Link from 'next/link';
 
-export default function MainNav({sName = "Khushi Arora"}) {
+export default function MainNav({sName = "Gurmehak Kaur Uppal"}) {
   const [searchField, setSearchField] = useState('');
   const router = useRouter();
 
